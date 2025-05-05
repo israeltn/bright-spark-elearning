@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -6,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import {
   Book,
-  Graduation,
+  GraduationCap,
   Home,
   School,
   Settings,
@@ -167,7 +166,7 @@ const Navigation: React.FC<NavigationProps> = ({ mobile, onClose }) => {
     <div className="flex h-full w-full flex-col border-r bg-white">
       <div className="flex items-center justify-between border-b px-6 py-5">
         <div className="flex items-center gap-2">
-          <Graduation className="h-8 w-8 text-brand-purple" />
+          <GraduationCap className="h-8 w-8 text-brand-purple" />
           <span className="text-lg font-bold">Bright Spark</span>
         </div>
         {mobile && onClose && (
@@ -198,7 +197,7 @@ const Navigation: React.FC<NavigationProps> = ({ mobile, onClose }) => {
         <div className="rounded-lg bg-gray-50 p-3">
           <div className="flex items-center gap-3">
             <div className="rounded-full bg-brand-purple p-2 text-white">
-              <Graduation className="h-5 w-5" />
+              <GraduationCap className="h-5 w-5" />
             </div>
             <div>
               <p className="text-sm font-medium">Logged in as:</p>

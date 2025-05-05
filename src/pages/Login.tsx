@@ -1,11 +1,10 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/contexts/AuthContext";
-import { Graduation } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +21,7 @@ const Login = () => {
       <div className="w-full max-w-md animate-fade-in space-y-8 rounded-xl bg-white p-8 shadow-lg">
         <div className="text-center">
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-purple text-white">
-            <Graduation className="h-8 w-8" />
+            <GraduationCap className="h-8 w-8" />
           </div>
           <h2 className="mt-6 text-2xl font-bold">Welcome to Bright Spark Academy</h2>
           <p className="mt-2 text-gray-600">Sign in to your account</p>

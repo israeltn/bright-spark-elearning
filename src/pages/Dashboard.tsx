@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useData } from "@/contexts/DataContext";
@@ -8,13 +7,16 @@ import SubjectCard from "@/components/dashboard/SubjectCard";
 import UpcomingAssignments from "@/components/dashboard/UpcomingAssignments";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import {
   Users,
   School,
   BookOpen,
   Award,
   BarChart,
-  Graduation,
+  GraduationCap,
+  Calendar,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -135,7 +137,7 @@ const Dashboard = () => {
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <Graduation className="mr-1 h-4 w-4 text-gray-400" />
+                    <GraduationCap className="mr-1 h-4 w-4 text-gray-400" />
                     <span className="text-sm text-gray-600">
                       {school.teachersCount} Teachers
                     </span>
@@ -159,7 +161,7 @@ const Dashboard = () => {
         <StatCard
           title="Total Teachers"
           value={users.filter((u) => u.role === "teacher" && u.schoolId === user?.schoolId).length}
-          icon={<Graduation className="h-6 w-6" />}
+          icon={<GraduationCap className="h-6 w-6" />}
           trend="up"
           change={2}
         />
